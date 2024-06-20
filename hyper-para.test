@@ -1,0 +1,8 @@
+embedding_size choice [16]
+hidden_units choice [16, 32, 48, 64, 80]
+att_layers choice [1, 2, 3]
+drop_rate_att choice [0.0, 0.1, 0.2, 0.3, 0.4]
+drop_rate_amp choice [0.0, 0.1, 0.2, 0.3, 0.4]
+add_first_order_residual: [True, False]
+group_hidden_dimension: [2, 4, 8, 10, 16]
+mlp_list: ["[]","[48]", "[128]"]
