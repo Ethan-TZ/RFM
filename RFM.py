@@ -42,7 +42,7 @@ class SelfAttentiveRotation(nn.Module):
         queries, keys, values = head_tensors
 
         scores = RotationBasedAttention(queries, keys, weight=self.weight).transpose(-2, -1)
-        values = self.dropout(values)
+        values = self.dropout(values).transpose(-2, -1)
         output = torch.cat(
             torch.split(
                 torch.transpose(values @ scores, -2, -1),
